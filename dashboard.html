@@ -8,6 +8,7 @@
     <link rel="icon" href="./public/images/dashboard-1.svg" />
     </head>
 <body>
+
     <header class="header-container">
         
         <a href="/" class="logo">
@@ -40,5 +41,95 @@
         </nav>
     </header>
 
-  </body>
-  </html>
+<main class="dashboard-container">
+
+    <aside class="portfolio-menu">
+        <h2>My portfolio</h2>
+
+        <nav class="portfolio-nav">
+            <ul>
+                <li>
+                    <a href="#" class="portfolio-link active">
+                        <img src="./public/images/rocket-2.svg" alt="" />
+                        <span>Portfolio 1</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="portfolio-link">
+                        <img src="./public/images/commet-2.svg" alt="" />
+                        <span>Portfolio 2</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="portfolio-link">
+                        <img src="./public/images/money-2.svg" alt="" />
+                        <span>Portfolio 3</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </aside>
+
+    <section class="dashboard-content">
+
+        <div  class="graphic-container">
+            <img src="./public/images/BarLineChart-2.svg" alt="Portfolio performce graph" />
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Cost</th>
+                        <th>1h%</th>
+                        <th>24h%</th>
+                        <th>7d%</th>
+                        <th>assets</th>
+                        <th>average purchase cost</th>
+                        <th>profit/loss</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Bitcoin</td>
+                        <td>$42,300</td>
+                        <td>+0.5%</td>
+                        <td>+2.3%</td>
+                        <td>+5.2%</td>
+                        <td>1.25 BTC</td>
+                        <td>$40,000</td>
+                        <td>+$2,875</td>
+                    </tr>
+                    <tr>
+                        <td>Ethereum</td>
+                        <td>$2,850</td>
+                        <td>-0.2%</td>
+                        <td>+1.5%</td>
+                        <td>+4.0%</td>
+                        <td>10.45 ETH</td>
+                        <td>$2,500</td>
+                        <td>+$3,662.5</td>
+                    </tr>
+                    <tr>
+                        <td>Cardano</td>
+                        <td>$0.95</td>
+                        <td>+1.1%</td>
+                        <td>+4.8%</td>
+                        <td>+8.3%</td>
+                        <td>3,200 ADA</td>
+                        <td>$0.70</td>
+                        <td>+$800</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+</main>
+</body>
+</html>
