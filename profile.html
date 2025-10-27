@@ -8,13 +8,13 @@
     <link rel="icon" href="./public/images/profile-1.svg" />
 </head>
 <body>
-   <header class="header-container">
+    <header class="header-container desktop-only">
         
         <a href="/" class="logo">
             <p>Crypto Portfolio Tracker</p>
         </a>
 
-        <nav>
+        <nav class="desktop-nav desktop-only">
             <ul>
                 <li>
                     <a href="./dashboard.html">
@@ -39,78 +39,108 @@
             </ul>
         </nav>
     </header>
-
-<main class="profile-container">
-
-    <div class="intro-section">
-        <h1>Profile settings</h1>
+    
+    <header class="mobile-header mobile-only">
+        <h1>Profile</h1>
         <button class="edit-profile-button">
             <img src="./public/images/edit-profile.svg" alt="Edit profile button" />
         </button>
-    </div>
+    </header>
 
-    <div class="profile-content-container">
+    <main class="profile-container">
 
-        <aside class="profile-avatar-section">
-            <img src="./public/images/avatar.svg" alt="User avatar" />
-            <button class="change-avatar-button">
-                Change avatar
+        <div class="intro-section desktop-only">
+            <h1>Profile settings</h1>
+            <button class="edit-profile-button">
+                <img src="./public/images/edit-profile.svg" alt="Edit profile button" />
             </button>
-        </aside>
+        </div>
 
-        <section class="profile-details-section">
+        <div class="profile-content-container">
 
-            <form class="profile-form">
+            <aside class="profile-avatar-section">
+                <img src="./public/images/avatar.svg" alt="User avatar" />
+                <h2 class="mobile-username mobile-only">Mister Biznes</h2>
+                <button class="change-avatar-button desktop-only">
+                    Change avatar
+                </button>
+            </aside>
 
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <div class="input-wrapper">
-                        <img src="./public/images/user-icon.svg" alt="" class="input-icon-left" />
-                        <input type="text" id="username" name="username" placeholder="Enter username" />
-                        <button type="button" class="clear-input-button" aria-label="Clear username">
-                            <img src="./public/images/close.svg" alt="" />
-                        </button>
+            <section class="profile-details-section">
+
+                <form class="profile-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <div class="input-wrapper">
+                            <img src="./public/images/user-icon.svg" alt="" class="input-icon-left" />
+                            <input type="text" id="username" name="username" placeholder="Enter username" />
+                            <button type="button" class="clear-input-button" aria-label="Clear username">
+                                <img src="./public/images/close.svg" alt="" />
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input-wrapper">
+                            <img src="./public/images/mail-icon.svg" alt="" class="input-icon-left" />
+                            <input type="email" id="email" name="email" placeholder="Enter email" />
+                            <button type="button" class="clear-input-button" aria-label="Clear email">
+                                <img src="./public/images/close.svg" alt="" />
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bio">Bio</label>
+                        <textarea id="bio" name="bio" placeholder="Нада заніматися бізнесом, а не сидіть в тік токє ..."></textarea>
+                    </div>
+                </form>
+
+
+                <div class="profile-settings">
+                    <div class="setting-item">
+                        <label for="notifications">Receive notifications</label>
+                        <label class="switch">
+                            <input type="checkbox" id="notifications" checked> <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <label for="dark-mode">Dark mode</label>
+                        <label class="switch">
+                            <input type="checkbox" id="dark-mode" checked>
+                            <span class="slider round"></span>
+                        </label>
                     </div>
                 </div>
+            </section>
+        </div>
+    </main>
 
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <div class="input-wrapper">
-                        <img src="./public/images/mail-icon.svg" alt="" class="input-icon-left" />
-                        <input type="email" id="email" name="email" placeholder="Enter email" />
-                        <button type="button" class="clear-input-button" aria-label="Clear email">
-                            <img src="./public/images/close.svg" alt="" />
-                        </button>
-                    </div>
-                </div>
+    <nav class="mobile-bottom-nav mobile-only">
+        <ul>
+            <li>
+                <a href="./dashboard.html">
+                    <img src="./public/images/dashboard-1.svg" alt="" />
+                    <span>Dashboard</span>
+                </a>
+            </li>
 
-                <div class="form-group">
-                    <label for="bio">Bio</label>
-                    <textarea id="bio" name="bio" placeholder="Write yout biography"></textarea>
-                </div>
-            </form>
+            <li>
+                <a href="./global-trends.html">
+                    <img src="./public/images/worldwide-1.svg" alt="" />
+                    <span>Global Trends</span>
+                </a>
+            </li>
 
+            <li>
+                <a href="/" class="active">
+                    <img src="./public/images/profile-1.svg" alt="" />
+                    <span>Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 
-            <div class="profile-settings">
-
-                <div class="setting-item">
-                    <label for="notifications">Receive notifications</label>
-                    <label class="switch">
-                        <input type="checkbox" id="notifications" checked> <span class="slider round"></span>
-                    </label>
-                </div>
-
-                <div class="setting-item">
-                    <label for="dark-mode">Dark mode</label>
-                    <label class="switch">
-                        <input type="checkbox" id="dark-mode" checked>
-                        <span class="slider round"></span>
-                    </label>
-                </div>
-
-            </div>
-        </section>
-    </div>
-</main>
 </body>
 </html>
