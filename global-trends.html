@@ -8,13 +8,13 @@
     <link rel="icon" href="./public/images/worldwide-1.svg" />
 </head>
 <body>
-    <header class="header-container">
+     <header class="header-container desktop-only">
         
         <a href="/" class="logo">
             <p>Crypto Portfolio Tracker</p>
         </a>
 
-        <nav>
+        <nav class="desktop-nav desktop-only">
             <ul>
                 <li>
                     <a href="./dashboard.html">
@@ -40,17 +40,22 @@
         </nav>
     </header>
 
+    <header class="mobile-header mobile-only">
+        <h1>Global market trends</h1>
+    </header> 
+
 <main class="global-trends-container">
 
     <section class="intro-section">
-        <h1>Global market trends</h1>
+        <h1 class="desktop-only">Global market trends</h1>
         <p>Monitor the latest trends and performance of cryptocurrencies</p>
     </section>
 
     <section class="market-performance-section">
         <h2>Market performance</h2>
         <div class="graph-container">
-            <img src="./public/images/BarLineChart-3.svg" alt="Cryptocurrency market performance graph" />
+            <img src="./public/images/BarLineChart-3.svg" alt="Cryptocurrency market performance graph (Desktop)" class="desktop-only" />
+            <img src="./public/images/BarLineChartMob-3.svg" alt="Market volume graph (Mobile)" class="mobile-only" />
         </div>
     </section>
     
@@ -58,7 +63,7 @@
 
         <h2>Market overview</h2>
 
-        <div class="table-container">
+        <div class="table-container desktop-only">
             <table>
                 <thead>
                     <tr>
@@ -157,6 +162,113 @@
         </div>
     </section>
 
+    <div class="table-container mobile-only">
+        <table class="mobile-trends-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Trend</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="./public/images/bitcoin-logo.svg" alt="" /> Bitcoin</td>
+                    <td>$42,300</td>
+                    <td class="positive-change">
+                        <img src="./public/images/trend-up.svg" alt="Increased" /> 2.3%
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="./public/images/ethereum-logo.svg" alt="" /> Ethereum</td>
+                    <td>$2,850</td>
+                    <td class="positive-change">
+                        <img src="./public/images/trend-up.svg" alt="Increased" /> 1.5%
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="./public/images/cardano-logo.svg" alt="" /> Cardano</td>
+                    <td>$1.35</td>
+                    <td class="negative-change">
+                        <img src="./public/images/trend_down.svg" alt="Decreased" /> 3.16%
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="./public/images/binance-coin-logo.svg" alt="" /> Binance coin</td>
+                    <td>$315</td>
+                    <td class="positive-change">
+                        <img src="./public/images/trend-up.svg" alt="Increased" /> 0.8%
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="./public/images/solana-logo.svg" alt="" /> Solana</td>
+                    <td>$110.2</td>
+                    <td class="negative-change">
+                        <img src="./public/images/trend_down.svg" alt="Decreased" /> 2.8%
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="./public/images/ripple-logo.svg" alt="" /> Ripple</td> <td>$0.85</td>
+                    <td class="positive-change">
+                        <img src="./public/images/trend-up.svg" alt="Increased" /> 1.1%
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="./public/images/dogecoin-logo.svg" alt="" /> Dogecoin</td>
+                    <td>$0.092</td>
+                    <td class="negative-change">
+                        <img src="./public/images/trend_down.svg" alt="Decreased" /> 0.7%
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="./public/images/polkadot-logo.svg" alt="" /> Polkadot</td>
+                    <td>$8.53</td>
+                    <td class="positive-change">
+                        <img src="./public/images/trend-up.svg" alt="Increased" /> 2.2%
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="./public/images/avalanche-logo.svg" alt="" /> Avalanche</td>
+                    <td>$35.7</td>
+                    <td class="positive-change">
+                        <img src="./public/images/trend-up.svg" alt="Increased" /> 3.0%
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="./public/images/polygon-logo.svg" alt="" /> Polygon</td> <td>$0.72</td>
+                    <td class="negative-change">
+                        <img src="./public/images/trend_down.svg" alt="Decreased" /> 1.2%
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </main>
+
+<nav class="mobile-bottom-nav mobile-only">
+    <ul>
+        <li>
+            <a href="./dashboard.html" class="active">
+                <img src="./public/images/dashboard-1.svg" alt="" />
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="/">
+                <img src="./public/images/worldwide-1.svg" alt="" />
+                <span>Global Trends</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="./profile.html">
+                <img src="./public/images/profile-1.svg" alt="" />
+                <span>Profile</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
 </body>
 </html>
