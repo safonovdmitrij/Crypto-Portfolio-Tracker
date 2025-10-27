@@ -55,9 +55,12 @@
             </div>
     
             <div class="hero-card">
-                <img src="./public/images/graphic-1.svg" alt="" />
+                <img src="./public/images/graphic-1.svg" alt="Portfolio performance graph (Desktop)" class="desktop-graph" />
 
-                <ul class="crypto-list">
+                <img src="/public/images/BarLineChartMob1.svg" alt="Portfolio performance graph (Mobile)" class="mobile-graph"/>
+
+
+                <ul class="crypto-list desktop-crypto-list">
 
                     <li class="crypto-item">
                         <img src="./public/images/bitcoin-logo-1.svg" alt="" />
@@ -85,6 +88,48 @@
                         </div>
                     </li>
                 </ul>
+
+                <div class="mobile-table-container">
+                    <table class="mobile-crypto-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>24h</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><img src="./public/images/bitcoin-logo.svg" alt="" />Bitcoin</td>
+                                <td>$42,300</td>
+                                <td class="positive-change">
+                                    <img src="./public/images/trend-up.svg" alt="Increased" />
+                                    4,82%
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="./public/images/ethereum-logo.svg" alt="" />Ethereum</td>
+                                <td>$2,850</td>
+                                <td class="positive-change">
+                                    <img src="./public/images/trend-up.svg" alt="Increased" />
+                                    3,16%
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="./public/images/cardano-logo.svg" alt="" />Cardano</td>
+                                <td>$1.35</td>
+                                <td class="positive-change">
+                                    <img src="./public/images/trend-up.svg" alt="Increased" />
+                                    2,21%
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
 
             </div>
         </div>
