@@ -1,311 +1,232 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="./styles.css"> 
-    <link rel="icon" href="./public/images/dashboard-1.svg" />
-</head>
-<body>
-
-    <header class="header-container desktop-only">
-        
-        <a href="/" class="logo">
-            <p>Crypto Portfolio Tracker</p>
-        </a>
-
-        <nav class="desktop-nav desktop-only">
-            <ul>
-                <li>
-                    <a href="./dashboard.html">
-                        <img src="./public/images/dashboard-1.svg" alt="" />
-                        <span>Dashboard</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="./global-trends.html">
-                        <img src="./public/images/worldwide-1.svg" alt="" />
-                        <span>Global Trends</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="./profile.html">
-                        <img src="./public/images/profile-1.svg" alt="" />
-                        <span>Profile</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+<%
+    const pageData = {
+        title: "Dashboard",
+        icon: "/images/dashboard-1.svg", 
+        currentPage: "dashboard" 
+    };
 
 
-    <header class="mobile-header mobile-only">
-        <h1>Dashboard</h1>
-        <button class="burger-menu-button" aria-label="Open menu">
-            <img src="./public/images/burger.svg" alt="" />
-        </button>
-
-        <nav class="mobile-drawer-nav"> 
-            <ul>
-                <li>
-                    <a href="#" class="portfolio-link active"> <img src="./public/images/rocket-2.svg" alt="" />
-                        <span>Portfolio 1</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#" class="portfolio-link">
-                        <img src="./public/images/commet-2.svg" alt="" />
-                        <span>Portfolio 2</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#" class="portfolio-link">
-                        <img src="./public/images/money-2.svg" alt="" />
-                        <span>Portfolio 3</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="dashboard-container">
-
-        <aside class="portfolio-menu desktop-only">
-            <h2>My portfolio</h2>
-
-            <nav class="portfolio-nav desktop-only">
-                <ul>
-                    <li>
-                        <a href="#" class="portfolio-link active">
-                            <img src="./public/images/rocket-2.svg" alt="" />
-                            <span>Portfolio 1</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="portfolio-link">
-                            <img src="./public/images/commet-2.svg" alt="" />
-                            <span>Portfolio 2</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="portfolio-link">
-                            <img src="./public/images/money-2.svg" alt="" />
-                            <span>Portfolio 3</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
-        </aside>
-
-        <section class="dashboard-content">
-
-            <div  class="graph-container">
-                <img src="./public/images/BarLineChart-2.svg" alt="Portfolio performce graph (Desktop)" class="desktop-only" />
-                <img src="./public/images/ChartMob2.svg" alt="Portfolio cost graph (Mobile)" class="mobile-only" />
-            </div>
-
-            <div class="assets-section">
-                <h2 class="mobile-only">Assets</h2>
-
-                <div class="table-container desktop-only">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Cost</th>
-                                <th>1h%</th>
-                                <th>24h%</th>
-                                <th>7d%</th>
-                                <th>assets</th>
-                                <th>average purchase cost</th>
-                                <th>profit/loss</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td>Bitcoin</td>
-                                <td>$42,300</td>
-                                <td>+0.5%</td>
-                                <td>+2.3%</td>
-                                <td>+5.2%</td>
-                                <td>1.25 BTC</td>
-                                <td>$40,000</td>
-                                <td>+$2,875</td>
-                            </tr>
-                            <tr>
-                                <td>Ethereum</td>
-                                <td>$2,850</td>
-                                <td>-0.2%</td>
-                                <td>+1.5%</td>
-                                <td>+4.0%</td>
-                                <td>10.45 ETH</td>
-                                <td>$2,500</td>
-                                <td>+$3,662.5</td>
-                            </tr>
-                            <tr>
-                                <td>Cardano</td>
-                                <td>$0.95</td>
-                                <td>+1.1%</td>
-                                <td>+4.8%</td>
-                                <td>+8.3%</td>
-                                <td>3,200 ADA</td>
-                                <td>$0.70</td>
-                                <td>+$800</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="table-container mobile-only">
-                    <table class="mobile-assets-table">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Price</th>
-                                <th>24h</th>
-                                <th>Profit/Loss</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td><img src="./public/images/bitcoin-logo.svg" alt="" />Bitcoin</td>
-                                <td>$42,300</td>
-                                <td class="positive-change">
-                                    <img src="./public/images/trend-up.svg" alt="Increased" /> 
-                                    4,82%
-                                </td>
-                                <td class="positive-change">
-                                    <img src="./public/images/trend-up.svg" alt="Increased" />
-                                    $2,875
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td><img src="./public/images/ethereum-logo.svg" alt="" />Ethereum</td>
-                                <td>$2,850</td>
-                                <td class="positive-change">
-                                    <img src="./public/images/trend-up.svg" alt="Increased" />
-                                    3,16%
-                                </td>
-                                <td class="positive-change">
-                                    <img src="./public/images/trend-up.svg" alt="Increased" />
-                                    $3,662
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td><img src="./public/images/cardano-logo.svg" alt="Decreased" />Cardano</td>
-                                <td>$1.35</td>
-                                <td class="negative-change">
-                                    <img src="./public/images/trend_down.svg" alt="Decreased" />
-                                    2,21%
-                                </td>
-                                <td class="negative-change">
-                                    <img src="./public/images/trend_down.svg" alt="Decreased" />
-                                    $3.16
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-
-            <div class="transactions-section mobile-only">
-                <h2>Transactions</h2>
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Asset</th>
-                                <th>Type</th>
-                                <th>Amount</th>
-                                <th>Total</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>09/25/2025</td>
-                                <td>BTC</td>
-                                <td>Buy</td>
-                                <td>0.50</td>
-                                <td>$20,400</td>
-                            </tr>
-                            <tr>
-                                <td>09/24/2025</td>
-                                <td>ETH</td>
-                                <td>Sell</td>
-                                <td>2.00</td>
-                                <td>$5,700</td>
-                            </tr>
-                            <tr>
-                                <td>09/23/2025</td>
-                                <td>ADA</td>
-                                <td>Buy</td>
-                                <td>1000</td>
-                                <td>$1,200</td>
-                            </tr>
-                            <tr>
-                                <td>09/20/2025</td>
-                                <td>ETH</td>
-                                <td>Sell</td>
-                                <td>1.50</td>
-                                <td>$3,900</td>
-                            </tr>
-                            <tr>
-                                <td>09/18/2025</td>
-                                <td>BTC</td>
-                                <td>Buy</td>
-                                <td>0.25</td>
-                                <td>$10,375</td>
-                            </tr>
-                            </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div class="extra-image-container mobile-only">
-                <img src="./public/images/mem.svg" alt="No comments..." />
-            </div>
-
-        </section>
-    </main>
-
-    <nav class="mobile-bottom-nav mobile-only">
+    const portfolioListHtml = `
         <ul>
             <li>
-                <a href="/" class="active">
-                    <img src="./public/images/dashboard-1.svg" alt="" />
-                    <span>Dashboard</span>
+                <a href="#" class="portfolio-link active"> 
+                    <img src="/images/rocket-2.svg" alt="" />
+                    <span>Portfolio 1</span>
                 </a>
             </li>
-
             <li>
-                <a href="./global-trends.html">
-                    <img src="./public/images/worldwide-1.svg" alt="" />
-                    <span>Global Trends</span>
+                <a href="#" class="portfolio-link">
+                    <img src="/images/commet-2.svg" alt="" />
+                    <span>Portfolio 2</span>
                 </a>
             </li>
-
             <li>
-                <a href="./profile.html">
-                    <img src="./public/images/profile-1.svg" alt="" />
-                    <span>Profile</span>
+                <a href="#" class="portfolio-link">
+                    <img src="/images/money-2.svg" alt="" />
+                    <span>Portfolio 3</span>
                 </a>
             </li>
         </ul>
-    </nav>
+    `;
 
-</body>
-</html>
+    const pageBody = `
+
+        <header class="mobile-header mobile-only">
+            <h1>Dashboard</h1>
+            <button class="burger-menu-button" aria-label="Open menu">
+                <img src="/images/burger.svg" alt="" />
+            </button>
+            <nav class="mobile-drawer-nav"> 
+                ${portfolioListHtml}
+            </nav>
+        </header>
+
+        <main class="dashboard-container">
+
+            <aside class="portfolio-menu desktop-only">
+                <h2>My portfolio</h2>
+                <nav class="portfolio-nav desktop-only">
+                    ${portfolioListHtml}
+                </nav>
+            </aside>
+
+            <section class="dashboard-content">
+
+                <div  class="graph-container">
+                    <img src="/images/BarLineChart-2.svg" alt="Portfolio performce graph (Desktop)" class="desktop-only" />
+                    <img src="/images/ChartMob2.svg" alt="Portfolio cost graph (Mobile)" class="mobile-only" />
+                </div>
+
+                <div class="assets-section">
+                    <h2 class="mobile-only">Assets</h2>
+
+                    <div class="table-container desktop-only">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Cost</th>
+                                    <th>1h%</th>
+                                    <th>24h%</th>
+                                    <th>7d%</th>
+                                    <th>assets</th>
+                                    <th>average purchase cost</th>
+                                    <th>profit/loss</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Bitcoin</td>
+                                    <td>$42,300</td>
+                                    <td>+0.5%</td>
+                                    <td>+2.3%</td>
+                                    <td>+5.2%</td>
+                                    <td>1.25 BTC</td>
+                                    <td>$40,000</td>
+                                    <td>+$2,875</td>
+                                </tr>
+                                <tr>
+                                    <td>Ethereum</td>
+                                    <td>$2,850</td>
+                                    <td>-0.2%</td>
+                                    <td>+1.5%</td>
+                                    <td>+4.0%</td>
+                                    <td>10.45 ETH</td>
+                                    <td>$2,500</td>
+                                    <td>+$3,662.5</td>
+                                </tr>
+                                <tr>
+                                    <td>Cardano</td>
+                                    <td>$0.95</td>
+                                    <td>+1.1%</td>
+                                    <td>+4.8%</td>
+                                    <td>+8.3%</td>
+                                    <td>3,200 ADA</td>
+                                    <td>$0.70</td>
+                                    <td>+$800</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table-container mobile-only">
+                        <table class="mobile-assets-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th>24h</th>
+                                    <th>Profit/Loss</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img src="/images/bitcoin-logo.svg" alt="" />Bitcoin</td>
+                                    <td>$42,300</td>
+                                    <td class="positive-change">
+                                        <img src="/images/trend-up.svg" alt="Increased" /> 
+                                        4,82%
+                                    </td>
+                                    <td class="positive-change">
+                                        <img src="/images/trend-up.svg" alt="Increased" />
+                                        $2,875
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="/images/ethereum-logo.svg" alt="" />Ethereum</td>
+                                    <td>$2,850</td>
+                                    <td class="positive-change">
+                                        <img src="/images/trend-up.svg" alt="Increased" />
+                                        3,16%
+                                    </td>
+                                    <td class="positive-change">
+                                        <img src="/images/trend-up.svg" alt="Increased" />
+                                        $3,662
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="/images/cardano-logo.svg" alt="Decreased" />Cardano</td>
+                                    <td>$1.35</td>
+                                    <td class="negative-change">
+                                        <img src="/images/trend_down.svg" alt="Decreased" />
+                                        2,21%
+                                    </td>
+                                    <td class="negative-change">
+                                        <img src="/images/trend_down.svg" alt="Decreased" />
+                                        $3.16
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="transactions-section mobile-only">
+                    <h2>Transactions</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Asset</th>
+                                    <th>Type</th>
+                                    <th>Amount</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>09/25/2025</td>
+                                    <td>BTC</td>
+                                    <td>Buy</td>
+                                    <td>0.50</td>
+                                    <td>$20,400</td>
+                                </tr>
+                                <tr>
+                                    <td>09/24/2025</td>
+                                    <td>ETH</td>
+                                    <td>Sell</td>
+                                    <td>2.00</td>
+                                    <td>$5,700</td>
+                                </tr>
+                                <tr>
+                                    <td>09/23/2025</td>
+                                    <td>ADA</td>
+                                    <td>Buy</td>
+                                    <td>1000</td>
+                                    <td>$1,200</td>
+                                </tr>
+                                <tr>
+                                    <td>09/20/2025</td>
+                                    <td>ETH</td>
+                                    <td>Sell</td>
+                                    <td>1.50</td>
+                                    <td>$3,900</td>
+                                </tr>
+                                <tr>
+                                    <td>09/18/2025</td>
+                                    <td>BTC</td>
+                                    <td>Buy</td>
+                                    <td>0.25</td>
+                                    <td>$10,375</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="extra-image-container mobile-only">
+                    <img src="/images/mem.svg" alt="No comments..." />
+                </div>
+
+            </section>
+        </main>
+    `;
+%>
+
+<%- include('layout', { 
+    title: pageData.title, 
+    icon: pageData.icon, 
+    currentPage: pageData.currentPage, 
+    body: pageBody
+}) %>

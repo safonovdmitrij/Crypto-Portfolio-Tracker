@@ -15,9 +15,9 @@ app.get('/', (req, res) => {
     res.render('index'); 
 });
 
-// app.get('/dashboard.html', (req, res) => {
-//     res.render('dashboard'); 
-// });
+app.get('/dashboard.html', (req, res) => {
+    res.render('dashboard'); 
+});
 
 // app.get('/global-trends.html', (req, res) => {
 //     res.render('global-trends'); 
