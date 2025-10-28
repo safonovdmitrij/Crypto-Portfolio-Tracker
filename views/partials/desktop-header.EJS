@@ -1,0 +1,31 @@
+<header class="header-container desktop-only">
+        
+    <a href="/" class="logo">
+        <p>Crypto Portfolio Tracker</p>
+    </a>
+
+    <nav class="desktop-nav desktop-only">
+        <ul>
+            <li>
+                <a href="./dashboard.html" class="<%= currentPage === 'dashboard' ? 'active-link' : '' %>">
+                    <img src="/images/dashboard-1.svg" alt="" />
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="./global-trends.html" class="<%= currentPage === 'trends' ? 'active-link' : '' %>">
+                    <img src="/images/worldwide-1.svg" alt="" />
+                    <span>Global Trends</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="./profile.html" class="<%= currentPage === 'profile' ? 'active-link' : '' %>">
+                    <img src="/images/profile-1.svg" alt="" />
+                    <span>Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>

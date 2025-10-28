@@ -1,0 +1,139 @@
+<%
+    const pageData = {
+        title: "Crypto",
+        icon: "/images/money_icon.png",
+        currentPage: "home" 
+    };
+
+    const pageBody = `
+        <main>
+            <section class="hero-section">
+                <div class="hero-container">
+
+                    <div class="hero-content">
+                        <h1>Track your crypto portfolio in real time</h1>
+                        <p>Monitor assets, transactions and market tends in one simple dashboard</p>
+                        
+                        <div class="hero-buttons">
+                            <a href="#" class="btn-primary">Sign up</a>
+                            <a href="#" class="btn-secondary">Try demo</a>
+                        </div>
+                    </div>
+            
+                    <div class="hero-card">
+                        <img src="/images/graphic-1.svg" alt="Portfolio performance graph (Desktop)" class="desktop-graph" />
+
+                        <img src="/images/BarLineChartMob1.svg" alt="Portfolio performance graph (Mobile)" class="mobile-graph"/>
+
+
+                        <ul class="crypto-list desktop-crypto-list">
+
+                            <li class="crypto-item">
+                                <img src="/images/bitcoin-logo-1.svg" alt="" />
+                                <div class="crypto-info">
+                                    <span>Bitcoin</span>
+                                    <span>= $42,300</span>
+                                </div>
+
+                                <div class="crypto-stats">
+                                    <span>1.25 BTC</span>
+                                    <span class="positive-change">+5.24%</span>
+                                </div>
+                            </li>
+
+                            <li class="crypto-item">
+                                <img src="/images/ethereum-logo-1.svg" alt="" />
+                                <div class="crypto-info">
+                                    <span>Ethereum</span>
+                                    <span>= $16,800</span>
+                                </div>
+
+                                <div class="crypto-stats">
+                                    <span>10.45 ETH</span>
+                                    <span class="positive-change">+3.67%</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="mobile-table-container">
+                            <table class="mobile-crypto-table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Price</th>
+                                        <th>24h</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td><img src="/images/bitcoin-logo.svg" alt="" />Bitcoin</td>
+                                        <td>$42,300</td>
+                                        <td class="positive-change">
+                                            <img src="/images/trend-up.svg" alt="Increased" />
+                                            4,82%
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><img src="/images/ethereum-logo.svg" alt="" />Ethereum</td>
+                                        <td>$2,850</td>
+                                        <td class="positive-change">
+                                            <img src="/images/trend-up.svg" alt="Increased" />
+                                            3,16%
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><img src="/images/cardano-logo.svg" alt="" />Cardano</td>
+                                        <td>$1.35</td>
+                                        <td class="positive-change">
+                                            <img src="/images/trend-up.svg" alt="Increased" />
+                                            2,21%
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="features-section">
+                <div class="features-container">
+                    <ul class="features-list">
+
+                        <li class="feature-item">
+                            <img src="/images/real-time-1.svg" alt="" />
+                            <span>Real-time analytics</span>
+                        </li>
+
+                        <li class="feature-item">
+                            <img src="/images/cyber-security-1.svg" alt="" />
+                            <span>Secure data</span>
+                        </li>
+
+                        <li class="feature-item">
+                            <img src="/images/logical-thinking-1.svg" alt="" />
+                            <span>Logical interface</span>
+                        </li>
+
+                        <li class="feature-item">
+                            <img src="/images/globe-1.svg" alt="" />
+                            <span>Multi-currency</span>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+        </main> 
+    `;
+%>
+
+<%- include('layout', { 
+    title: pageData.title, 
+    icon: pageData.icon, 
+    currentPage: pageData.currentPage, 
+    body: pageBody
+}) %>
