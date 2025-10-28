@@ -19,13 +19,13 @@ app.get('/dashboard.html', (req, res) => {
     res.render('dashboard'); 
 });
 
-// app.get('/global-trends.html', (req, res) => {
-//     res.render('global-trends'); 
-// });
+app.get('/global-trends.html', (req, res) => {
+    res.render('global-trends'); 
+});
 
-// app.get('/profile.html', (req, res) => {
-//     res.render('profile'); 
-// });
+app.get('/profile.html', (req, res) => {
+    res.render('profile'); 
+});
 
 
 // Запуск сервера
